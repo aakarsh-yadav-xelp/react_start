@@ -1,5 +1,7 @@
 import React from "react";
 import "./TodoAdd.css";
+import { SHOWN } from "./App.js";
+// import PropTypes from "prop-types";
 import _ from "lodash";
 
 export default class todoAdd extends React.Component {
@@ -30,7 +32,7 @@ export default class todoAdd extends React.Component {
           type="button"
           value="Save"
           className="Todo-add-button"
-          onClick={e => this.saveDataList()}
+          onClick={e => this.addTodo()}
         >
           Save
         </button>
@@ -38,39 +40,33 @@ export default class todoAdd extends React.Component {
           type="reset"
           value="Reset"
           className="Todo-add-button"
-          onClick={e => this.resetDataList()}
+          onClick={e => this.todoAddReset()}
         >
           Reset
         </button>
       </div>
     );
   }
-  saveDataList() {
+  addTodo() {
     let title = document.getElementById("Todo-title").value;
     let description = document.getElementById("Todo-description").value;
-    document.getElementById("Todo-title").value = "";
-    document.getElementById("Todo-description").value = "";
+    this.todoAddReset();
     if (title === "" || description === "") {
       return true;
     }
     let todo = {};
     todo.title = title;
     todo.description = description;
-    todo.status = 1;
-    this.todoAdd(todo);
-    return true;
-  }
-  todoAdd(todoToAdd) {
-    alert("sadsa");
+    todo.status = SHOWN;
+
     const oldTodos = _.cloneDeep(this.state.todos);
     const { todos } = this.props;
-    todoToAdd._id = todos.length + 1;
-    oldTodos.push(todoToAdd);
-    console.log(oldTodos);
-    this.forceUpdate({ oldTodos });
-    console.log(this.state.todos);
+    todo._id = todos.length;
+    oldTodos.push(todo);
+    this.setState({ todos: oldTodos });
   }
-  resetDataList() {
+
+  todoAddReset() {
     document.getElementById("Todo-title").value = " ";
     document.getElementById("Todo-description").value = " ";
   }

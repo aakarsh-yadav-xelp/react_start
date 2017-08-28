@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-import TodoList from "./dataPrint";
-import TodoAdd from "./addData";
-import AddData from "./addData";
+import TodoList from "./TodoList";
+import TodoAdd from "./TodoAdd";
+// import AddData from "./addData";
 export const DELETE = 0;
 export const SHOWN = 1;
 
