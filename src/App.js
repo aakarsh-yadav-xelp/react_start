@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import TodoList from "./TodoList";
-import TodoAdd from "./TodoAdd";
+
 // import AddData from "./addData";
 export const DELETE = 0;
 export const SHOWN = 1;
@@ -27,8 +27,8 @@ var todos = [
   }
 ];
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       todos: todos
     };
@@ -39,16 +39,8 @@ class App extends React.Component {
         <div className="PageHeader">
           <h2>Welcome to React</h2>
         </div>
-        <div className="PageContent">
-          <div className="PageLeft">
-            <TodoList todos={this.state.todos} />
-          </div>
-          <div className="PageRight">
-            <h1>Add Todo</h1>
-            <TodoAdd todos={this.state.todos} />
-          </div>
-        </div>
-        <div className="pageBottom">Thanx</div>
+        <TodoList todos={this.state.todos} />
+        <div className="pageBottom">Thanx </div>
       </div>
     );
   }

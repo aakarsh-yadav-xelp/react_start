@@ -1,19 +1,13 @@
 import React from "react";
 import "./TodoAdd.css";
 import { SHOWN } from "./App.js";
-// import PropTypes from "prop-types";
 import _ from "lodash";
 
 export default class todoAdd extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      todos: props.todos
-    };
-  }
   render() {
     return (
       <div>
+        <h1>Add Todo</h1>
         Welcome<br />
         <input
           type="text"
@@ -57,13 +51,7 @@ export default class todoAdd extends React.Component {
     todo.title = title;
     todo.description = description;
     todo.status = SHOWN;
-
-    const oldTodos = _.cloneDeep(this.state.todos);
-    const { todos } = this.props;
-    todo._id = todos.length;
-    oldTodos.push(todo);
-
-    this.setState({ todos: oldTodos });
+    this.props.addTodo(todo);
   }
 
   todoAddReset() {
