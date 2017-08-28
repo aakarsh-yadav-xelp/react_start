@@ -67,7 +67,7 @@ export default class todoAdd extends React.Component {
     todoToAdd._id = todos.length + 1;
     oldTodos.push(todoToAdd);
     console.log(oldTodos);
-    this.setState({ todos: oldTodos });
+    this.forceUpdate({ oldTodos });
     console.log(this.state.todos);
   }
   resetDataList() {
