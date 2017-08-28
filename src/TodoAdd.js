@@ -17,15 +17,14 @@ export default class todoAdd extends React.Component {
         Welcome<br />
         <input
           type="text"
-          name="Todo-title-input"
-          className="Todo-title-input"
-          id="Todo-title"
+          className="Todo-add-title-input"
+          id="Todo-add-title"
         />
         <br />
         <textarea
           name="description"
-          className="Todo-description-input"
-          id="Todo-description"
+          className="Todo-add-description-input"
+          id="Todo-add-description"
         />
         <br />
         <button
@@ -48,8 +47,8 @@ export default class todoAdd extends React.Component {
     );
   }
   addTodo() {
-    let title = document.getElementById("Todo-title").value;
-    let description = document.getElementById("Todo-description").value;
+    let title = document.getElementById("Todo-add-title").value;
+    let description = document.getElementById("Todo-add-description").value;
     this.todoAddReset();
     if (title === "" || description === "") {
       return true;
@@ -63,11 +62,12 @@ export default class todoAdd extends React.Component {
     const { todos } = this.props;
     todo._id = todos.length;
     oldTodos.push(todo);
+
     this.setState({ todos: oldTodos });
   }
 
   todoAddReset() {
-    document.getElementById("Todo-title").value = " ";
-    document.getElementById("Todo-description").value = " ";
+    document.getElementById("Todo-add-title").value = "";
+    document.getElementById("Todo-add-description").value = "";
   }
 }

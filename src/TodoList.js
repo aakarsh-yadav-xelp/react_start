@@ -19,6 +19,7 @@ export default class TodoList extends React.Component {
       }
     });
     this.setState({ todos: oldTodos });
+    console.log(this.state.todos);
   }
 
   editTodo(todo) {
