@@ -71,7 +71,7 @@ export default class todoAdd extends React.Component {
     console.log(this.state.todos);
   }
   resetDataList() {
-    document.getElementById("Todo-title").value = "";
-    document.getElementById("Todo-description").value = "";
+    document.getElementById("Todo-title").value = " ";
+    document.getElementById("Todo-description").value = " ";
   }
 }
