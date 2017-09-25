@@ -1,5 +1,5 @@
 <h2>Simple Todo App using  React js</h2>
-<p>In this app i used React js and manages their stages useing react js and also awesome  interface.</p>
+<p>A Simple way to modifyTodo app in React js and manages their stages useing react js and also awesome  interface.</p>
 <h2>Feartures</h2>
 <ul>
 <li>Adding todo with simplest way</li>
