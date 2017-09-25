@@ -1,7 +1,7 @@
 import React from "react";
 import "./TodoAdd.css";
 import { SHOWN } from "./App.js";
-import _ from "lodash";
+
 
 export default class todoAdd extends React.Component {
   render() {

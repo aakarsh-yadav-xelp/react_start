@@ -45,3 +45,54 @@
   background: none;
   border: none;
 }
+.TodoSearch{
+  background-color:#e2e2e2;
+  width: auto;
+  height: 36px;
+  font-size: 18px;
+  
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  float: right;
+  padding-left: 10px;
+  margin-right: 10%;
+  width: auto;
+  height: 36px;
+  font-size: 18px;
+  color: #151515;;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  float: right;
+  padding-left: 10px;
+  margin-right: 10%;
+}
+.TodoSearchList{
+  border: none;
+  width: fit-content;
+  padding-left: 20px;
+  position: fixed;
+  display: block;
+  margin-left: 71%;  
+  margin-top: 59px;
+  
+}
+.TodoSearchListItem{
+  background-color: #e2e2e2;
+  width: 226px;
+  text-align: left;
+  padding-left: 8px;
+  margin-left: -12px;
+  padding-bottom: 12px;
+  border-bottom: solid 1px #cac4c4;
+  padding-top: 7px;
+  font-family: sans-serif;
+  -webkit-transition: background-color 0.5s ,color 0.5s;
+  -moz-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
+  }
+  .TodoSearchListItem:hover{
+    background-color: #55739a;
+    color:white
+  }

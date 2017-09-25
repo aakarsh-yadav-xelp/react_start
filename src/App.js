@@ -39,6 +39,7 @@ class App extends React.Component {
         <div className="PageHeader">
           <h2>Welcome to React</h2>
         </div>
+       
         <TodoList todos={this.state.todos} />
         <div className="pageBottom">Thanx </div>
       </div>

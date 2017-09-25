@@ -1,17 +1,19 @@
 import React from "react";
 import Todo from "./Todo.js";
 import "./TodoList.css";
-import { DELETE, SHOWN } from "./App.js";
+import { DELETE} from "./App.js";
 import TodoAdd from "./TodoAdd";
 import _ from "lodash";
-
+import TodoAuto from "./todoauto";
 export default class TodoList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       todos: props.todos
     };
+   
   }
+ 
   deleteTodo(todoToDelete) {
     const oldTodos = _.cloneDeep(this.state.todos);
     oldTodos.forEach(todo => {
@@ -42,8 +44,12 @@ export default class TodoList extends React.Component {
   }
 
   render() {
+    console.log(this.state);
     return (
+      <div> 
+        <TodoAuto todos={this.state.todos} />
       <div className="PageContent">
+        
         <div className="PageLeft">
           <div className="TodoList">
             <h1 className="TodoList-header">Todos</h1>
@@ -55,6 +61,7 @@ export default class TodoList extends React.Component {
         <div className="PageRight">
           <TodoAdd addTodo={todo => this.addTodo(todo)} />
         </div>
+      </div>
       </div>
     );
   }
