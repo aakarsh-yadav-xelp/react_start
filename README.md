@@ -8,4 +8,4 @@
 <li>Cancel TOdo Edit mode</li>
 <li>Search Todo with <b>Downshift in react js</b>.</li>
 </ul>
-<h3>Thanx</h3>
+<h3>Thanx...</h3>
